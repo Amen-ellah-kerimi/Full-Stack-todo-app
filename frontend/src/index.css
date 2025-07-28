@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-4xl mx-auto px-4 py-6;
+  }
+
+  .header {
+    @apply text-center mb-8;
+  }
+
+  .header h1 {
+    @apply text-4xl font-bold text-gray-800 mb-2;
+  }
+
+  .header p {
+    @apply text-gray-600 text-lg;
+  }
+
+  .todo-form {
+    @apply bg-white p-6 rounded-lg shadow-md mb-8;
+  }
+
+  .todo-form h2 {
+    @apply text-xl font-semibold text-gray-800 mb-4;
+  }
+
+  .form-group {
+    @apply flex gap-3 items-center;
+  }
+
+  .form-group input {
+    @apply flex-1 px-4 py-3 border-2 border-gray-200 rounded-lg text-base transition-colors duration-200 focus:outline-none focus:border-primary-500;
+  }
+
+  .btn {
+    @apply px-6 py-3 border-none rounded-lg text-base cursor-pointer transition-all duration-200 font-medium;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-success {
+    @apply bg-green-500 text-white px-4 py-2 text-sm hover:bg-green-600;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white px-4 py-2 text-sm hover:bg-red-600;
+  }
+
+  .todo-list {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+
+  .todo-list h2 {
+    @apply p-5 m-0 bg-gray-50 border-b border-gray-200 text-gray-800 font-semibold;
+  }
+
+  .todo-item {
+    @apply p-5 border-b border-gray-200 flex items-center justify-between transition-colors duration-200 hover:bg-gray-50 last:border-b-0;
+  }
+
+  .todo-content {
+    @apply flex items-center gap-4 flex-1;
+  }
+
+  .todo-checkbox {
+    @apply w-5 h-5 cursor-pointer;
+  }
+
+  .todo-title {
+    @apply text-base text-gray-800 transition-all duration-200;
+  }
+
+  .todo-title.completed {
+    @apply line-through text-gray-400;
+  }
+
+  .todo-actions {
+    @apply flex gap-3;
+  }
+
+  .loading {
+    @apply text-center py-10 text-gray-500 text-lg;
+  }
+
+  .error {
+    @apply bg-red-50 text-red-800 p-4 rounded-lg mb-5 border border-red-200;
+  }
+
+  .success {
+    @apply bg-green-50 text-green-800 p-4 rounded-lg mb-5 border border-green-200;
+  }
+
+  .empty-state {
+    @apply text-center py-10 text-gray-500;
+  }
+
+  .empty-state h3 {
+    @apply mb-2 text-gray-400 font-medium;
+  }
+
+  .stats {
+    @apply flex justify-between p-5 bg-gray-50 border-t border-gray-200 text-sm text-gray-500;
+  }
+}
+
+@layer utilities {
+  @media (max-width: 768px) {
+    .container {
+      @apply px-3 py-4;
+    }
+
+    .header h1 {
+      @apply text-3xl;
+    }
+
+    .form-group {
+      @apply flex-col;
+    }
+
+    .form-group input {
+      @apply mb-3;
+    }
+
+    .todo-item {
+      @apply flex-col items-start gap-3;
+    }
+
+    .todo-actions {
+      @apply self-end;
+    }
+  }
+}
