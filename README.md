@@ -277,15 +277,6 @@ L'application utilise **Tailwind CSS v3** avec les fonctionnalités suivantes :
 ## Licence
 
 Licence MIT
-
-## Contribution
-
-1. Forkez le dépôt
-2. Créez une branche de fonctionnalité
-3. Effectuez vos modifications
-4. Testez minutieusement
-5. Soumettez une pull request
-
 ---
 
 **Bon codage ! 🚀**
